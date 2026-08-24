@@ -228,6 +228,32 @@
             transform: rotate(90deg) scaleX(0.3);
         }
 
+        /* 6. Unique Glowing Space Sun for the Yellow Button */
+        .cosmic-sun {
+            width: 60px;
+            height: 60px;
+            background: #ffffff;
+            border-radius: 50%;
+            /* Gives it a powerful, fuzzy solar heat blur */
+            filter: blur(1.5px);
+            position: relative;
+        }
+        
+        /* This adds a massive radiant solar flare cloud behind the sun core */
+        .cosmic-sun::after {
+            content: '';
+            position: absolute;
+            top: -20px; left: -20px;
+            right: -20px; bottom: -20px;
+            background: #ffffff;
+            border-radius: 50%;
+            /* Deep space glow fog effect */
+            filter: blur(12px);
+            box-shadow: 0 0 30px 15px rgba(255, 255, 255, 0.9);
+            z-index: -1;
+            opacity: 0.85;
+        }
+        
         /* 7. Misty Hazy Star Burst */
         .nebula-bubble {
             width: 75px; height: 75px;
